@@ -14,13 +14,13 @@ def load_dataset():
     DATA_F3 = os.path.join("data", "car3.txt")
 
     with open(DATA_F1, 'r') as file:
-        dataset = file.readlines()
+        dataset.extend(file.readlines())
     
     with open(DATA_F2, 'r') as file:
-        dataset = file.readlines()
+        dataset.extend(file.readlines())
     
     with open(DATA_F3, 'r') as file:
-        dataset = file.readlines()
+        dataset.extend(file.readlines())
 
     return dataset
 
