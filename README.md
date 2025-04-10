@@ -4,8 +4,8 @@ This repository contains a RAG system implemented using Ollama. The code allows 
 
 ## Features  
 - Local vector database storing document chunks
-- Semantic search using embeddings from the bge-base-en-v1.5 model
-- Text generation using Llama-3.2-1B-Instruct
+- Semantic search using embeddings from the ```bge-base-en-v1.5``` model
+- Text generation using ```Llama-3.2-1B-Instruct```
 - Simple cosine similarity implementation for retrieval
 - Interactive command-line interface
 
@@ -33,7 +33,7 @@ docker run -p 11434:11434 --env EMBEDDING_MODEL="hf.co/CompendiumLabs/bge-base-e
 ## Notice
 - <b>Limited Dataset</b>: The current implementation uses a very small dataset (just three text files). For production use or more accurate results, you could expand the dataset significantly on your own dataset. The retrieval quality is directly tied to the comprehensiveness of your data.
 - <b>Basic Retrieval Method</b>: The retrieval mechanism uses simple cosine similarity which may not always return the most contextually relevant results. More sophisticated retrieval methods (like reranking or hybrid search) could improve response quality.
-- <b>Model Flexibility</b>: The current language model (Llama-3.2-1B-Instruct) may have limited reasoning capabilities for complex RAG applications. You can easily swap it for a more powerful model in the ```LANGUAGE_MODEL``` variable to improve response quality and reasoning abilities.
+- <b>Model Flexibility</b>: The current language model ```(Llama-3.2-1B-Instruct)``` may have limited reasoning capabilities for complex RAG applications. You can easily swap it for a more powerful model in the ```LANGUAGE_MODEL``` variable to improve response quality and reasoning abilities.
 
 # Acknowledge  
 - https://huggingface.co/blog/ngxson/make-your-own-rag  
