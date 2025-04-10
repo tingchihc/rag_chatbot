@@ -27,8 +27,5 @@ COPY . .
 # Expose Ollama port
 EXPOSE 11434
 
-# Setup entrypoint script
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+# Start Ollama and run the app (JSON format)
+CMD ["bash", "-c", "ollama serve & sleep 5 && ollama pull $EMBEDDING_MODEL && ollama pull $LANGUAGE_MODEL && python app.py"]
